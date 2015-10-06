@@ -16,7 +16,9 @@ class DetailViewController: UIViewController , TOCropViewControllerDelegate , UI
     var selectedSubmission : PFObject?
     var selectedChallenge : PFObject?
     var challengesController : ChallengesViewController?
+    var friendSubmissionsArr = [PFObject]()
     
+    @IBOutlet weak var friendSubmissions: UIButton!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
@@ -38,6 +40,40 @@ class DetailViewController: UIViewController , TOCropViewControllerDelegate , UI
                 })
             }
         }
+        
+        let following = SecondViewController.following.map( {
+            (o:PFObject) -> PFUser in
+                return o["following"] as! PFUser
+        });
+        
+        let s = following.map( {
+            (o:PFUser) -> String in
+            do{
+             try o.fetchIfNeeded()
+            }
+            catch{
+                
+            }
+            return o.username!
+        });
+        
+        print(s)
+        
+        let query = PFQuery(className:"Submission")
+        query.whereKey("user", containedIn: following)
+        query.whereKey("challenge", equalTo: self.selectedChallenge!)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                self.friendSubmissionsArr = objects!
+                self.friendSubmissions.titleLabel?.text = "\(objects!.count) friends submitted"
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
+        
         
         categoryLabel.text = selectedChallenge!["category"]["Name"] as! String
         titleLabel.text = selectedChallenge!["name"] as! String
@@ -117,15 +153,14 @@ class DetailViewController: UIViewController , TOCropViewControllerDelegate , UI
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func seeFriendSubs(sender: AnyObject) {
+        
     }
-    */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationVC = segue.destinationViewController as! FollowingViewController
+        destinationVC.submissions = self.friendSubmissionsArr
+    }
+    
 
 }

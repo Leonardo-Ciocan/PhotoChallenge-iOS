@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		38291C903C7AA9BB3A8EA574 /* Pods_PhotoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2A4ACE18BAC0F941B619DF /* Pods_PhotoChallenge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B338FAA91BC3BB84001E6B9C /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FAA71BC3BB84001E6B9C /* FriendCell.swift */; settings = {ASSET_TAGS = (); }; };
+		B338FAAA1BC3BB84001E6B9C /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B338FAA81BC3BB84001E6B9C /* FriendCell.xib */; settings = {ASSET_TAGS = (); }; };
+		B338FAAC1BC3D88F001E6B9C /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FAAB1BC3D88F001E6B9C /* FollowingViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B338FAAF1BC3D98E001E6B9C /* FollowingPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FAAD1BC3D98E001E6B9C /* FollowingPictureCell.swift */; settings = {ASSET_TAGS = (); }; };
+		B338FAB01BC3D98E001E6B9C /* FollowingPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B338FAAE1BC3D98E001E6B9C /* FollowingPictureCell.xib */; settings = {ASSET_TAGS = (); }; };
 		B3B98CA51BC124EE0081325B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B98CA41BC124EE0081325B /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B3B98CAA1BC1A3320081325B /* DifficultyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B98CA81BC1A3320081325B /* DifficultyHeader.swift */; settings = {ASSET_TAGS = (); }; };
 		B3B98CAB1BC1A3320081325B /* DifficultyHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3B98CA91BC1A3320081325B /* DifficultyHeader.xib */; settings = {ASSET_TAGS = (); }; };
@@ -38,6 +43,11 @@
 /* Begin PBXFileReference section */
 		3B189F149E5F0DC92051533F /* Pods-PhotoChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoChallenge/Pods-PhotoChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		5DD060DB0A1C8518E9F34098 /* Pods-PhotoChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoChallenge/Pods-PhotoChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		B338FAA71BC3BB84001E6B9C /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		B338FAA81BC3BB84001E6B9C /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		B338FAAB1BC3D88F001E6B9C /* FollowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
+		B338FAAD1BC3D98E001E6B9C /* FollowingPictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowingPictureCell.swift; sourceTree = "<group>"; };
+		B338FAAE1BC3D98E001E6B9C /* FollowingPictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowingPictureCell.xib; sourceTree = "<group>"; };
 		B3B98CA41BC124EE0081325B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B3B98CA81BC1A3320081325B /* DifficultyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyHeader.swift; sourceTree = "<group>"; };
 		B3B98CA91BC1A3320081325B /* DifficultyHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DifficultyHeader.xib; sourceTree = "<group>"; };
@@ -134,6 +144,11 @@
 				B3B98CA41BC124EE0081325B /* DetailViewController.swift */,
 				B3B98CA81BC1A3320081325B /* DifficultyHeader.swift */,
 				B3B98CA91BC1A3320081325B /* DifficultyHeader.xib */,
+				B338FAA71BC3BB84001E6B9C /* FriendCell.swift */,
+				B338FAA81BC3BB84001E6B9C /* FriendCell.xib */,
+				B338FAAB1BC3D88F001E6B9C /* FollowingViewController.swift */,
+				B338FAAD1BC3D98E001E6B9C /* FollowingPictureCell.swift */,
+				B338FAAE1BC3D98E001E6B9C /* FollowingPictureCell.xib */,
 			);
 			path = PhotoChallenge;
 			sourceTree = "<group>";
@@ -252,8 +267,10 @@
 				B3ECBD511BBF8D93003EE7E9 /* ChallengeCell.xib in Resources */,
 				B3D4CF551B95280300619BCC /* Main.storyboard in Resources */,
 				B3D4CF5A1B95280300619BCC /* LaunchScreen.xib in Resources */,
+				B338FAAA1BC3BB84001E6B9C /* FriendCell.xib in Resources */,
 				B3B98CAB1BC1A3320081325B /* DifficultyHeader.xib in Resources */,
 				B3D4CF571B95280300619BCC /* Images.xcassets in Resources */,
+				B338FAB01BC3D98E001E6B9C /* FollowingPictureCell.xib in Resources */,
 				B3E6B9DC1BBF7AE500875AE6 /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,8 +341,11 @@
 				B3ECBD501BBF8D93003EE7E9 /* ChallengeCell.swift in Sources */,
 				B3ECBD4D1BBF8B3D003EE7E9 /* ChallengesViewController.swift in Sources */,
 				B3D4CF4E1B95280300619BCC /* AppDelegate.swift in Sources */,
+				B338FAA91BC3BB84001E6B9C /* FriendCell.swift in Sources */,
 				B3D4CF501B95280300619BCC /* FirstViewController.swift in Sources */,
+				B338FAAC1BC3D88F001E6B9C /* FollowingViewController.swift in Sources */,
 				B3B98CAA1BC1A3320081325B /* DifficultyHeader.swift in Sources */,
+				B338FAAF1BC3D98E001E6B9C /* FollowingPictureCell.swift in Sources */,
 				B3E6B9DB1BBF7AE500875AE6 /* CategoryCell.swift in Sources */,
 				B3B98CA51BC124EE0081325B /* DetailViewController.swift in Sources */,
 			);
@@ -465,6 +485,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PhotoChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +505,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PhotoChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LC.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -34,6 +34,20 @@ class FirstViewController: UIViewController , UICollectionViewDelegateFlowLayout
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
+        do{
+        let query = PFQuery(className:"Follow")
+        query.whereKey("user", equalTo: PFUser.currentUser()!)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                SecondViewController.following = objects!
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
+        }
         
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         

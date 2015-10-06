@@ -7,19 +7,49 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    static var following = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = .None
+        tableView.registerNib(UINib(nibName: "FriendCell", bundle: nil), forCellReuseIdentifier: "Cell")
+    }
+    
+    func reload(){
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return SecondViewController.following.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell : FriendCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FriendCell
+        cell.setData(SecondViewController.following[indexPath.item]);
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
 
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
+    }
 
 }
 

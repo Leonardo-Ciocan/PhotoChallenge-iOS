@@ -142,7 +142,7 @@ class ChallengesViewController: UIViewController , UICollectionViewDelegateFlowL
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Create a new variable to store the instance of PlayerTableViewController
         let destinationVC = segue.destinationViewController as! DetailViewController
-        //destinationVC.navigationItem.title = self.challenges[self.selected]["name"] as! String
+        destinationVC.navigationItem.title = self.selected!["name"] as! String
         destinationVC.selectedChallenge = self.selected
         destinationVC.selectedSubmission = self.submissionMap[self.selected!]
     }

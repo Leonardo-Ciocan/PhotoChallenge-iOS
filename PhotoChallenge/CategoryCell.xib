@@ -17,21 +17,20 @@
                         <rect key="frame" x="29" y="39" width="42" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0Ng-as-zi4">
                         <rect key="frame" x="0.0" y="72" width="100" height="3"/>
                         <animations/>
-                        <color key="progressTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="trackTintColor" red="1" green="0.58746926379999997" blue="0.006117006189" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="progressTintColor" red="1" green="0.39582490819999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="trackTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </progressView>
                 </subviews>
                 <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <animations/>
-            <color key="backgroundColor" red="0.91689461450341003" green="0.53864740419327939" blue="0.0056086500319901126" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.95720108695652173" green="0.95720108695652173" blue="0.95720108695652173" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="p7T-bj-bKg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="NoO-xA-rWZ"/>
                 <constraint firstItem="0Ng-as-zi4" firstAttribute="top" secondItem="p7T-bj-bKg" secondAttribute="bottom" constant="12" id="SRs-HK-7gb"/>

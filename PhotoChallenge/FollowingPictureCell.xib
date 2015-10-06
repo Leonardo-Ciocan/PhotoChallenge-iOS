@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="265" id="KGk-i7-Jjw" customClass="FollowingPictureCell" customModule="PhotoChallenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="305" height="265"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="305" height="264.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-ul-A16">
+                        <rect key="frame" x="0.0" y="0.0" width="305" height="264.5"/>
+                        <animations/>
+                    </imageView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iua-0k-zP3">
+                        <rect key="frame" x="-4" y="227" width="309" height="37"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MG2-Iy-wpJ">
+                            <rect key="frame" x="0.0" y="0.0" width="309" height="37"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jake Hurwitz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-q4-Ynp">
+                                    <rect key="frame" x="105" y="8.5" width="99" height="20.5"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <constraints>
+                                <constraint firstItem="pgB-q4-Ynp" firstAttribute="centerY" secondItem="MG2-Iy-wpJ" secondAttribute="centerY" id="JIl-yb-Ci7"/>
+                                <constraint firstItem="pgB-q4-Ynp" firstAttribute="centerX" secondItem="MG2-Iy-wpJ" secondAttribute="centerX" id="uys-Uj-SQ9"/>
+                            </constraints>
+                        </view>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="Dnd-2A-Wfp"/>
+                        </constraints>
+                        <blurEffect style="dark"/>
+                    </visualEffectView>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="ph9-ul-A16" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="Gps-w2-KoJ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iua-0k-zP3" secondAttribute="trailing" constant="-8" id="N0S-8n-Lxn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ph9-ul-A16" secondAttribute="trailing" constant="-8" id="PnK-HD-eJm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="iua-0k-zP3" secondAttribute="bottom" constant="-7.5" id="X4g-9l-bZO"/>
+                    <constraint firstItem="iua-0k-zP3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" multiplier="0.5" constant="-8" id="c68-ep-QXd"/>
+                    <constraint firstItem="ph9-ul-A16" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="d0F-hh-ePa"/>
+                    <constraint firstItem="ph9-ul-A16" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="ge3-QY-SiV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.88480808420000001" green="0.25572613109999998" blue="0.056465506309999997" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="img" destination="ph9-ul-A16" id="aGs-JF-6w8"/>
+                <outlet property="userLabel" destination="pgB-q4-Ynp" id="qsZ-JC-kgY"/>
+            </connections>
+            <point key="canvasLocation" x="343.5" y="485.5"/>
+        </tableViewCell>
+    </objects>
+</document>
